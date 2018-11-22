@@ -1,0 +1,6 @@
+framework module Pods_InfiniteImageSlider {
+  umbrella header "Pods-InfiniteImageSlider-umbrella.h"
+
+  export *
+  module * { export * }
+}
