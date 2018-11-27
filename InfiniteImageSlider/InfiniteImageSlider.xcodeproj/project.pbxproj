@@ -94,8 +94,7 @@
 		BBC9468A21A6F1C5007CA060 /* InfiniteImageSlider */ = {
 			isa = PBXGroup;
 			children = (
-				BBC946A821A6F4A7007CA060 /* Repeats */,
-				BBC9469D21A6F1FF007CA060 /* AttemptList */,
+				BBC9469D21A6F1FF007CA060 /* InfiniteImage */,
 				BBC9468B21A6F1C5007CA060 /* AppDelegate.swift */,
 				BBC9468D21A6F1C5007CA060 /* ViewController.swift */,
 				BBC9468F21A6F1C5007CA060 /* Main.storyboard */,
@@ -106,16 +105,17 @@
 			path = InfiniteImageSlider;
 			sourceTree = "<group>";
 		};
-		BBC9469D21A6F1FF007CA060 /* AttemptList */ = {
+		BBC9469D21A6F1FF007CA060 /* InfiniteImage */ = {
 			isa = PBXGroup;
 			children = (
+				BBC946A821A6F4A7007CA060 /* Repeats */,
 				BBC9469E21A6F1FF007CA060 /* AttemptListCell.xib */,
 				BBC9469F21A6F1FF007CA060 /* AttemptListXibView.xib */,
 				BBC946A021A6F1FF007CA060 /* AttemptListCell.swift */,
 				BBC946A121A6F1FF007CA060 /* KNAttempterListView.swift */,
 				BBC946A221A6F1FF007CA060 /* AttemptListXibView.swift */,
 			);
-			path = AttemptList;
+			path = InfiniteImage;
 			sourceTree = "<group>";
 		};
 		BBC946A821A6F4A7007CA060 /* Repeats */ = {
@@ -204,15 +204,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-InfiniteImageSlider-checkManifestLockResult.txt",
 			);
@@ -226,15 +222,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-InfiniteImageSlider/Pods-InfiniteImageSlider-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 			);
