@@ -27,7 +27,7 @@ open class KNAttempterListView: UIView {
     }
     
     @IBInspectable
-    public var shouldScrollimagesAutomatic : Bool = false{
+    public var shouldScrollimagesAutomatic : Bool = true{
         didSet {
             view.shouldScrollimagesAutomatic = shouldScrollimagesAutomatic
          }
