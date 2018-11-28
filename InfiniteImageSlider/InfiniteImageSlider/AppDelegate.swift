@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  InfiniteImageSlider
 //
-//  Created by Sheeraz Ahmed Memon on 22/11/2018.
+//  Created by Afnan khan on 22/11/2018.
 //  Copyright © 2018 iSystematic. All rights reserved.
 //
 

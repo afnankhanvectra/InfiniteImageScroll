@@ -6,6 +6,9 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,10 +21,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Jk-Qq-zDA" customClass="KNAttempterListView" customModule="InfiniteImageSlider" customModuleProvider="target">
-                                <rect key="frame" x="16" y="46" width="343" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Jk-Qq-zDA" customClass="KNAttempterListView" customModule="InfiniteImageSlider" customModuleProvider="target">
+                                <rect key="frame" x="100.5" y="211.5" width="174" height="58"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="5Jk-Qq-zDA" secondAttribute="height" multiplier="192:64" id="G4K-fF-Zlm"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="TIME_GAP">
                                         <real key="value" value="2"/>
@@ -29,13 +34,23 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="shouldScrollimagesAutomatic" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wx2-ck-cvM" customClass="KNAttempterListView" customModule="InfiniteImageSlider" customModuleProvider="target">
-                                <rect key="frame" x="16" y="234" width="343" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wx2-ck-cvM" customClass="KNAttempterListView" customModule="InfiniteImageSlider" customModuleProvider="target">
+                                <rect key="frame" x="100.5" y="314.5" width="174" height="58"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Wx2-ck-cvM" secondAttribute="height" multiplier="192:64" id="7u2-2t-nsV"/>
+                                </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="bg_Color"/>
+                        <constraints>
+                            <constraint firstItem="Wx2-ck-cvM" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="13k-Wl-Nr6"/>
+                            <constraint firstItem="Wx2-ck-cvM" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Lqa-4i-WbT"/>
+                            <constraint firstItem="5Jk-Qq-zDA" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="0.7" id="SmX-Ua-Mw5"/>
+                            <constraint firstItem="5Jk-Qq-zDA" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="192/414" id="WuV-Nq-ZbC"/>
+                            <constraint firstItem="Wx2-ck-cvM" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="192/414" id="d0e-Il-V4m"/>
+                            <constraint firstItem="5Jk-Qq-zDA" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="gig-Ri-pYj"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
@@ -45,7 +60,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="140" y="124.58770614692655"/>
+            <point key="canvasLocation" x="-1" y="27"/>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="bg_Color">
+            <color red="0.20000000300000001" green="0.22699999809999999" blue="0.23899999259999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

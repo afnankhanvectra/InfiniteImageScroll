@@ -2,7 +2,7 @@
 //  KNAttempterListView.swift
 //  ChalengeAppResearch
 //
-//  Created by Sheeraz Ahmed Memon on 06/10/2018.
+//  Created by Afnan khanon 06/10/2018.
 //  Copyright © 2018 SamSoft. All rights reserved.
 //
 
@@ -11,14 +11,14 @@ import UIKit
 @IBDesignable
 open class KNAttempterListView: UIView {
     //MARK: inspectable
- 
+    
     @IBInspectable
     public var userImages : [UIImage]?{
         didSet {
             view.userImages = userImages
         }
     }
- 
+    
     @IBInspectable
     public var userURLs : [String]?{
         didSet {
@@ -30,7 +30,14 @@ open class KNAttempterListView: UIView {
     public var shouldScrollimagesAutomatic : Bool = true{
         didSet {
             view.shouldScrollimagesAutomatic = shouldScrollimagesAutomatic
-         }
+        }
+    }
+    
+    @IBInspectable
+    public var shouldCircleImage : Bool = true{
+        didSet {
+            view.shouldCircleImage = shouldCircleImage
+        }
     }
     
     @IBInspectable
@@ -71,10 +78,6 @@ open class KNAttempterListView: UIView {
         
         // use bounds not frame or it'll be offset
         view.frame = bounds
-        // Make the view stretch with containing view
-      //  view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        // view.backgroundColor = UIColor.clear
-     //   view.changeFrameOfColectionView(withframe: bounds)
         addSubview(view)
     }
     

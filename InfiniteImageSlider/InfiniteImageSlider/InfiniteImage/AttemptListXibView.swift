@@ -2,7 +2,7 @@
 //  AttemptListXibView.swift
 //  ChalengeAppResearch
 //
-//  Created by Sheeraz Ahmed Memon on 06/10/2018.
+//  Created by Afnan khan on 06/10/2018.
 //  Copyright © 2018 SamSoft. All rights reserved.
 //
 
@@ -49,6 +49,12 @@ class AttemptListXibView: UIView , UICollectionViewDelegate, UICollectionViewDat
          }
     }
     
+    public var shouldCircleImage : Bool = true{
+        didSet {
+            self.collectionView.reloadData()
+        }
+    }
+    
     public var TIME_GAP : Double = 2.0{
         didSet {
             self.collectionView.reloadData()
@@ -93,11 +99,11 @@ class AttemptListXibView: UIView , UICollectionViewDelegate, UICollectionViewDat
         if userImages != nil && userImages!.count > 0 {
          /// Index path is infinite  (10000) for circular .   so use Mod for infinite
         let index = (indexPath.row % userImages!.count)
-            cell.configCell(withimage: userImages![index])
+            cell.configCell(withimage: userImages![index] , isCircleImage : shouldCircleImage)
         } else if userURLs != nil && userURLs!.count > 0 {
             /// Index path is infinite  (10000) for circular .   so use Mod for infinite
             let index = (indexPath.row % userURLs!.count)
-            cell.configCell(withURL: userURLs![index])
+            cell.configCell(withURL: userURLs![index], isCircleImage : shouldCircleImage)
         }
         return cell
     }
@@ -115,7 +121,7 @@ class AttemptListXibView: UIView , UICollectionViewDelegate, UICollectionViewDat
     
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.size.height, height: collectionView.frame.size.height)
+         return CGSize(width: collectionView.frame.size.height, height: collectionView.frame.size.height)
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0.0
